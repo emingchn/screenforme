@@ -1,0 +1,41 @@
+	echo "hahhah";
+	?>
+	<?php
+	echo "haah123";
+	if(!empty($_POST['password']){
+		echo "haah";
+		$password = md5(mysql_real_escape_string($_POST['password']));
+		mysql_query("UPDATE user SET password = '".$password."' WHERE email ='$email'");
+	}
+	else{
+		
+	if(mysql_num_rows(mysql_query("SELECT * FROM user WHERE email = '".$email."'"))!=1){
+			echo "oops.";
+	}
+	
+	$("#reset").validate({
+		rules:{
+			password:{
+				required: true,
+				maxlength:32,
+				minlength:6
+			},
+			repassword:{
+				required: true,
+				maxlength:32,
+				minlength:6,
+				equalTo:"#password"
+			},
+		},
+		messages:{
+			password:{
+				required: "Please enter password.",
+				minlength: "At least 6 characters!"
+			},
+			repassword:{
+				required: "Please re-enter password.",
+				minlength: "At least 6 characters!",
+				equalTo: "Not matched!"
+			}
+		}
+	});
