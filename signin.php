@@ -1,7 +1,6 @@
 <?php include "connectdb.php"; ?>
 <?php include_once 'header.php'; ?>
 
-	<div id="main">
 		<?php 
 		if(!empty($_SESSION['loggedin']) && !empty($_SESSION['identifier'])){
 			//let the user access the main page
@@ -29,11 +28,11 @@
 				$_SESSION['loggedin'] = 1;
 				echo "<h1>Success</h1>";
 				echo "<h1>We are now redirecting you to the member area.</h1>";
-				echo "<meta content='1;signin.php' http-equiv='refresh'/>"; 
+				echo "<meta content='1;index.php' http-equiv='refresh'/>"; 
 			}
 			else{
 				echo "<h1>Error</h1>";  
-        		echo "<p>Sorry, your account could not be found. Please <a href=\"signin.php\">click here to try again</a>.</p>";  
+        		echo "<p>Sorry, your account could not be found. Please <a href=\"index.php#signin\">click here to try again</a>.</p>";  
 			}
 			// let the user login
 		?>
@@ -44,9 +43,9 @@
 		?>
 		<h1>Member Login</h1>  
       
-   <p>Thanks for visiting! Please either login below, or <a href="signup.php">click here to register</a>.</p>  
+   <p>Thanks for visiting! Please either login below, or <a href="index.php#signup">click here to register</a>.</p>  
       
-    <form method="post" action="signin.php" name="loginform" id="loginform">  
+    <form method="post" action="index.php#signin" name="loginform" id="loginform">  
     <fieldset>  
         <label for="identifier">Username or Email:</label><input type="text" name="identifier" id="identifier" /><br />  
         <label for="password">Password:</label><input type="password" name="password" id="password" /><br />  
@@ -54,7 +53,7 @@
           <input type="checkbox" value="rememberme">Remember me
         </label><br />
         <input type="submit" name="login" id="login" value="Login" />  
-        <a href= "findpw.php">Forget password?</a>
+        <a href= "index.php#findpw">Forget password?</a>
     </fieldset>  
     </form>
 			

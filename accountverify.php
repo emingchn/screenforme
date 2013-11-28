@@ -1,3 +1,4 @@
+<?php include_once 'header.php'; ?>
 <?php 
 include "connectdb.php";
 $verify = stripslashes(trim($_GET['verify'])); 

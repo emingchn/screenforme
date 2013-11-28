@@ -1,16 +1,3 @@
-<?php include "connectdb.php"; ?>  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
-<html xmlns="http://www.w3.org/1999/xhtml">    
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
-    <script type="text/javascript" src="js/jquery.js"></script> 
-    <script type="text/javascript" src="js/jquery.validate.js"></script>
-    <script type="text/javascript" src="js/formvalidation.js"></script> 
-    <title>Screen For Me</title>  
-    <link rel="stylesheet" href="css/style.css" type="text/css" />  
-</head>    
-<body>    
-<div id="main">  
 <?php  
 if(!empty($_POST['username']) && !empty($_POST['password']))  
 {  
@@ -72,7 +59,7 @@ else
       
    <p>Please enter your details below to register.</p>  
       
-    <form method="post" action="signup.php" name="registerform" id="registerform">  
+    <form method="post" action="index.php#signup" name="registerform" id="registerform">  
     <fieldset>  
         <label for="username">Username:</label><input type="text" name="username" id="username" /><br />  
         <label for="password">Password:</label><input type="password" name="password" id="password" /><br />  
@@ -86,6 +73,3 @@ else
 }  
 ?>  
   
-</div>  
-</body>  
-</html>

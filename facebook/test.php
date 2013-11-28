@@ -6,19 +6,20 @@ $facebook = new Facebook(array(
   'secret' => 'e07625547d54925100e2b3cc289814c7',
   'cookie' => true,
 ));
-echo "hello"; 
-$session = $facebook->getSession();
 
+$user = $facebook->getUser();
 
-$me = null;
-if ($session) {
+if ($user) {
   try {
-    $uid = $facebook->getUser();
-    $me = $facebook->api('/me');
+    // Proceed knowing you have a logged in user who's authenticated.
+    $user_profile = $facebook->api('/me');
   } catch (FacebookApiException $e) {
     error_log($e);
+    $user = null;
   }
 }
+
+
  
 if ($me) {
     $logoutUrl = $facebook->getLogoutUrl();
