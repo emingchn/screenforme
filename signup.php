@@ -11,7 +11,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
      if(mysql_num_rows($checkusername) == 1||mysql_num_rows($checkemail) == 1)  
      {  
         echo "<h1>Error</h1>";  
-        echo "<p>Sorry, that username or email address is taken. Please go back and try again.</p>";  
+        echo "<p>Sorry, that username or email address is taken. Please go back and <a href=\"index.php\">try again</a>.</p>"; 
      }  
      else  
      {  
@@ -38,7 +38,6 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
             $mail->AddAddress($email, $username);
             if(!$mail->Send()){
                 echo "<h1>failed</h1>";
-                echo "This is the HTML message body <b>in bold!</b>"; 
             }
             else{
                 echo "<p>Your account was successfully created. Please check mailbox for activation.";
@@ -47,7 +46,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
         else  
         {  
             echo "<h1>Error</h1>";  
-            echo "<p>Sorry, your registration failed. Please go back and try again.</p>";      
+            echo "<p>Sorry, your registration failed. Please go back and <a href=\"index.php\">try again</a>.</p>";   
         }         
      }  
 }  
@@ -55,10 +54,8 @@ else
 {  
     ?>  
       
-   <h1>Register</h1>  
-      
+   <h1>Register</h1>      
    <p>Please enter your details below to register.</p>  
-      
     <form method="post" action="index.php#signup" name="registerform" id="registerform">  
     <fieldset>  
         <label for="username">Username:</label><input type="text" name="username" id="username" /><br />  

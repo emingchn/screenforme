@@ -27,7 +27,8 @@
 	                echo "<h1>failed</h1>";
 	            }
 	            else{
-	                echo "<p>A reset mail has been sent.Please check mailbox.";
+	            	echo "<br/><br/><br/><br/>";
+	                echo "<p>A reset mail has been sent.Please check mailbox.<p>";
 	            }  
 			}
 		}

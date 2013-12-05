@@ -1,6 +1,3 @@
-<?php include "connectdb.php"; ?>
-<?php include_once 'header.php'; ?>
-
 		<?php 
 		if(!empty($_SESSION['loggedin']) && !empty($_SESSION['identifier'])){
 			//let the user access the main page
@@ -13,7 +10,7 @@
 		}
 		elseif (!empty($_POST['identifier'])) {
 			$identifier = mysql_real_escape_string($_POST['identifier']);
-			$password = md5(mysql_real_escape_string($_POST['password']));
+			$password = md5(mysql_real_escape_string($_POST['pwd']));
 			$checklogin = null;
 			if(filter_var($identifier, FILTER_VALIDATE_EMAIL)){
     			$checklogin = mysql_query("SELECT * FROM user WHERE email = '".$identifier."' AND password = '".$password."' AND status = '1'");
@@ -32,7 +29,7 @@
 			}
 			else{
 				echo "<h1>Error</h1>";  
-        		echo "<p>Sorry, your account could not be found. Please <a href=\"index.php#signin\">click here to try again</a>.</p>";  
+        		echo "<p>Sorry, your account could not be found. Please click here to<a href=\"index.php\"> try again</a>.</p>";  
 			}
 			// let the user login
 		?>
@@ -48,11 +45,8 @@
     <form method="post" action="index.php#signin" name="loginform" id="loginform">  
     <fieldset>  
         <label for="identifier">Username or Email:</label><input type="text" name="identifier" id="identifier" /><br />  
-        <label for="password">Password:</label><input type="password" name="password" id="password" /><br />  
-        <label class="checkbox">
-          <input type="checkbox" value="rememberme">Remember me
-        </label><br />
-        <input type="submit" name="login" id="login" value="Login" />  
+        <label for="pwd">Password:</label><input type="password" name="pwd" id="pwd" /><br />  
+        <input type="submit" name="login" id="login" value="Login" />  <br />
         <a href= "index.php#findpw">Forget password?</a>
     </fieldset>  
     </form>
