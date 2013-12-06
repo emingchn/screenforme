@@ -4,7 +4,7 @@
 		<?php
 		if(!empty($_POST['email'])){
 			$email = mysql_real_escape_string($_POST['email']);
-			if(mysql_num_rows(mysql_query("SELECT * FROM user WHERE email = '".$email."'"))!=1){ 
+			if(mysql_num_rows(mysql_query("SELECT * FROM users WHERE email = '".$email."'"))!=1){ 
    				echo "<p>Sorry, that email address does not exist. Please go back and try again.</p>";  	
 			}else{
 				require 'class.phpmailer.php';

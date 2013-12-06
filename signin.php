@@ -13,9 +13,9 @@
 			$password = md5(mysql_real_escape_string($_POST['pwd']));
 			$checklogin = null;
 			if(filter_var($identifier, FILTER_VALIDATE_EMAIL)){
-    			$checklogin = mysql_query("SELECT * FROM user WHERE email = '".$identifier."' AND password = '".$password."' AND status = '1'");
+    			$checklogin = mysql_query("SELECT * FROM users WHERE email = '".$identifier."' AND password = '".$password."' AND status = '1'");
 			}else{
-				$checklogin = mysql_query("SELECT * FROM user WHERE userName = '".$identifier."' AND password = '".$password."' AND status = '1'");
+				$checklogin = mysql_query("SELECT * FROM users WHERE userName = '".$identifier."' AND password = '".$password."' AND status = '1'");
 			}						
 			if(mysql_num_rows($checklogin) == 1){
 				$row = mysql_fetch_array($checklogin);
@@ -38,7 +38,7 @@
 		}
 		else{// display the login form
 		?>
-		<h1>Member Login</h1>  
+		<h1>Login</h1>  
       
    <p>Thanks for visiting! Please either login below, or <a href="index.php#signup">click here to register</a>.</p>  
       

@@ -5,8 +5,8 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
     $password = md5(mysql_real_escape_string($_POST['password']));  
     $email = mysql_real_escape_string($_POST['email']);  
       
-     $checkusername = mysql_query("SELECT * FROM user WHERE userName = '".$username."'");
-     $checkemail = mysql_query("SELECT * FROM user WHERE email = '".$email."'");
+     $checkusername = mysql_query("SELECT * FROM users WHERE userName = '".$username."'");
+     $checkemail = mysql_query("SELECT * FROM users WHERE email = '".$email."'");
        
      if(mysql_num_rows($checkusername) == 1||mysql_num_rows($checkemail) == 1)  
      {  
@@ -17,7 +17,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
      {  
         $regtime = time();
         $actikey = md5($username.$password.$regtime);
-        $registerquery = mysql_query("INSERT INTO user (userName, password, email, actiKey) VALUES('".$username."', '".$password."', '".$email."','".$actikey."')");  
+        $registerquery = mysql_query("INSERT INTO users (userName, password, email, actiKey) VALUES('".$username."', '".$password."', '".$email."','".$actikey."')");  
         if($registerquery)  
         {  
             require 'class.phpmailer.php';
@@ -34,7 +34,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
             $mail->SetFrom('emingchn@gmail.com', 'screenforme');    
             $mail->Subject    = 'Activate your account at Screenforme.com';   
             $mail->IsHTML(true);      
-            $mail->Body       = '<a href="localhost/accountverify.php?verify='.$actikey.'&username='.$username.'">Click here to activate your account.</a>';
+            $mail->Body       = '<a href="localhost/screenforme/accountverify.php?verify='.$actikey.'&username='.$username.'">Click here to activate your account.</a>';
             $mail->AddAddress($email, $username);
             if(!$mail->Send()){
                 echo "<h1>failed</h1>";

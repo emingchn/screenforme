@@ -3,7 +3,7 @@ session_start();
 
 $dbhost = 'localhost';
 
-$dbname = 'users';
+$dbname = 'cse636';
 
 $dbuser = 'screenforme';
 
