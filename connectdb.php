@@ -2,11 +2,8 @@
 session_start();
 
 $dbhost = 'localhost';
-
 $dbname = 'cse636';
-
 $dbuser = 'wj';
-
 $dbpw = '1213';
 
 mysql_connect($dbhost,$dbuser,$dbpw) or die ("Connection error:".mysql_error());

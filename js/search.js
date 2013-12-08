@@ -1,4 +1,3 @@
-
 $.getScript("js/movie.js");
 function testsearch(inoformation){
 	$("div#result").empty();
@@ -23,6 +22,7 @@ function testsearch(inoformation){
 	var count = 0;
 	var num = 0;
 	var movies = data.movies;
+
 	$.each(movies, function(index, movie) {
 		if(count%3==0){
 			$("div#result .container").append('<div class="row" id="row'+num+'" />');

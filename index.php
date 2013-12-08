@@ -31,7 +31,7 @@
 		</article>
 	</div>	
 	<div id="result" class="wrapper wrapper-style3">
-			 <a onclick = "moviedetails('http://api.rottentomatoes.com/api/public/v1.0/movies/770672122.json')"> <img height=300px width=100px src=images/me.jpg /></a>
+			 
 	</div>
 	<div id="movie" class="wrapper wrapper-style3">
 
