@@ -44,6 +44,8 @@
 						<br class="clear" />
 					</div>
 					<div id="reviews">
+					
+					</div>
 						
 					<br class="clear" />
 				</div>
@@ -51,13 +53,8 @@
 					<div id="rating">
 						
 					</div>
-					<div id="cast_runtime">
-						<div id="cast"> 
-							
-						</div>
-						<div id="runtime">
-							
-						</div>
+					<div id="cast">
+
 					</div>
 				</div>
 			</div>
@@ -73,6 +70,7 @@
 			</div>
 			<br class="clear" />
 		</div>
+		<br class="clear" />
 	</div>
 	<?php 
 		if(empty($_SESSION['loggedin'])){	

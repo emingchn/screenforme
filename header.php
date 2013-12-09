@@ -9,6 +9,7 @@
 	<script src="js/skel.min.js"></script>
 	<script src="js/search.js"></script>
 	<script src="js/movie.js"></script>
+	<script src="js/index.js"></script>
 	<title>Screen For Me</title>
 	<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />

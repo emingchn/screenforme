@@ -1,12 +1,12 @@
 $.getScript("js/movie.js");
-function testsearch(inoformation){
+function testsearch(information){
 	$("div#result").empty();
 	var apikey = "whsxrvc2yyu732zj39ayf4r5";
 	var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
 	// construct the uri with our apikey
 	var moviesSearchUrl = baseUrl + '/movies.json?apikey=' + apikey;
 	var listsSearchUrl = baseUrl + '/lists.json?apikey=' + apikey;
-	var query = inoformation;
+	var query = information;
 	$(document).ready(function() {
 	  // send off the query
 	  $.ajax({
