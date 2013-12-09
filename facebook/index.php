@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>PHP SDK 3.0 & Graph API base FBConnect Tutorial | Thinkdiff.net</title>
+        <title>FBConnect</title>
     
         <script type="text/javascript">
             function streamPublish(name, description, hrefTitle, hrefLink, userPrompt){        
@@ -60,12 +60,6 @@
        });
        
      </script>
-
-    <a href="http://ithinkdiff.net" target="_blank" style="text-decoration: none;">
-       <img src="http://ftechdb.com/ithinkdiff.net-banner.jpg" style="border:none" alt="Download iPhone/iPad Dictionaries, Applications & Games" height="92" />
-   </a>
-   <br />
-    <h3>PHP SDK 3.0 & Graph API base FBConnect Tutorial | Thinkdiff.net</h3>
     <a href="http://thinkdiff.net/facebook-connect/php-sdk-3-0-graph-api-base-facebook-connect-tutorial/" target="_blank">Tutorial: PHP SDK 3.0 & Graph API base Facebook Connect Tutorial</a> <br /><br />
     <br />
     

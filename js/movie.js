@@ -1,11 +1,10 @@
 
 function moviedetails(information){
-	$("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
+
 	var apikey = "whsxrvc2yyu732zj39ayf4r5";
 	var baseUrl = information;
 	// construct the uri with our apikey
 	var moviesSelfUrl = baseUrl + '?apikey=' + apikey;
-
 	$(document).ready(function() {
 	  // send off the query
 	  $.ajax({
@@ -16,11 +15,21 @@ function moviedetails(information){
 	});
 
 	function searchMovieDetails(data) {
-		$("div#movie #movie_container #movie_info").append('<div class="container" />');
+		/****empty*********/
+	// $("div#movie #movie_container #movie_footer #movie_share #para").empty();
+	// $("div#movie #movie_container #movie_info #movie_info_left #post_description #description").empty();
+	// $("div#movie #movie_container #movie_info #movie_info_left #post_description #post").empty();
+	// $("div#movie #movie_container #movie_info #movie_info_right #rating").empty();
+	// $("div#movie #movie_container #movie_info #movie_info_right #cast").empty();
+	// $("div#movie #movie_container #movie_info #movie_info_left #reviews").empty();
+	// $("div#movie #movie_container #movie_info").empty();
+	// $("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
+	// $("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
+	/*********append********/
+		$("div#movie #movie_container #movie_footer #movie_share #para").append('localhost/screenforme/index.php?mn='+data.id+'user=');
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<h3 class="title: ">' + data.title +'</h3>'); 
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #post").append('<img width=350px height=450px src = "' + data.posters.original +'" />'); 
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<p >'+'Year: ' + data.year +'</p>'); 
-		$("div#movie #movie_container #movie_infv #movie_info_right #cast_runtime #runtime" ).append('<p >'+'Runtime: ' + data.runtmie +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p >'+'Critics score: ' + data.ratings.critics_score +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p >'+'Audience score: '+ data.ratings.audience_score +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p >'+'Director: '+ data.abridged_directors[0].name +'</p>');

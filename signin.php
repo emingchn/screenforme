@@ -19,9 +19,11 @@
 			}						
 			if(mysql_num_rows($checklogin) == 1){
 				$row = mysql_fetch_array($checklogin);
-				$email = $row['email'];				
+				$email = $row['email'];
+				$usr = $row['userName'];				
 				$_SESSION['identifier'] = $identifier;
 				$_SESSION['email'] = $email;
+				$_SESSION['usr'] = $usr;
 				$_SESSION['loggedin'] = 1;
 				echo "<h1>Success</h1>";
 				echo "<h1>We are now redirecting you to the member area.</h1>";

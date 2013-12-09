@@ -77,11 +77,11 @@
         if (isset($_GET['publish'])){
             try {
                 $publishStream = $facebook->api("/$user/feed", 'post', array(
-                    'message' => "I love thinkdiff.net for facebook app development tutorials. :)", 
-                    'link'    => 'http://ithinkdiff.net',
-                    'picture' => 'http://thinkdiff.net/ithinkdiff.png',
-                    'name'    => 'iOS Apps & Games',
-                    'description'=> 'Checkout iOS apps and games from iThinkdiff.net. I found some of them are just awesome!'
+                    'message' => "Comment this movie please!", 
+                    'link'    => 'http://localhost/screenforme/index',
+                    'picture' => 'http://content6.flixster.com/movie/11/17/35/11173584_det.jpg',
+                    'name'    => 'Movie name',
+                    'description'=> 'How about this movie?'
                     )
                 );
                 //as $_GET['publish'] is set so remove it by redirecting user to the base url 

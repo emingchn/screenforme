@@ -1,11 +1,8 @@
 <?php
-/*
- * @author: Mahmud Ahsan (http://thinkdiff.net)
- */
     //facebook application
     $fbconfig['appid' ]     = "608546139206835";
     $fbconfig['secret']     = "e07625547d54925100e2b3cc289814c7";
-    $fbconfig['baseurl']    = "http://localhost/screenforme/facebook/index.php"; //"http://thinkdiff.net/demo/newfbconnect1/php/sdk3/index.php";
+    $fbconfig['baseurl']    = "http://localhost/screenforme/index.php";
 
     //
     if (isset($_GET['request_ids'])){
@@ -77,18 +74,18 @@
         if (isset($_GET['publish'])){
             try {
                 $publishStream = $facebook->api("/$user/feed", 'post', array(
-                    'message' => "I love thinkdiff.net for facebook app development tutorials. :)", 
-                    'link'    => 'http://ithinkdiff.net',
-                    'picture' => 'http://thinkdiff.net/ithinkdiff.png',
-                    'name'    => 'iOS Apps & Games',
-                    'description'=> 'Checkout iOS apps and games from iThinkdiff.net. I found some of them are just awesome!'
+                    'message' => "Comment this movie please!", 
+                    'link'    => 'www.google.com',
+                    'picture' => 'http://content6.flixster.com/movie/11/17/35/11173584_det.jpg',
+                    'name'    => 'Movie name',
+                    'description'=> 'How about this movie?'
                     )
                 );
                 //as $_GET['publish'] is set so remove it by redirecting user to the base url 
             } catch (FacebookApiException $e) {
                 d($e);
             }
-            $redirectUrl     = $fbconfig['baseurl'] . '/index.php?success=1';
+            $redirectUrl     = $fbconfig['baseurl'] . '?success=1';
             header("Location: $redirectUrl");
         }
 

@@ -1,9 +1,5 @@
 <?php include "connectdb.php"; ?>
 <?php include_once 'header.php'; ?>
-<html>
-<head>
-</head>
-<body>
 	<div id="index" class="wrapper wrapper-style1 wrapper-first">
 		<article class="container">
 			<div id="comingsoon">
@@ -63,9 +59,14 @@
 					
 				</div>
 				<div id="movie_share">
-					<a href="" class="button button-big">
-						Share it through facebook
-					</a>
+					<p id="para"></p>
+					<a href="" id="copy_p" class="button button-big">Copy Link</a> 
+					<?php if (!$user) { ?>
+       					You've to login with Faceook to share.
+       						 <a href="<?=$loginUrl?>" class="button button-big">Facebook Login</a>
+    				<?php } else { ?>
+        					<a id="copy_p" onclick="streamPublish('screenforme','Comment this please!','Comment this please!','','screenforme1'); return false;" class="button button-big">Share</a>
+   					<?php } ?>
 				</div>
 			</div>
 			<br class="clear" />
