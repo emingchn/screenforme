@@ -25,16 +25,52 @@
 			<div id="slideshow">
 				
 			</div>	
-			<a href="" class="button button-big">
-				Share it through facebook
-			</a>
 		</article>
 	</div>	
 	<div id="result" class="wrapper wrapper-style3">
 			 
 	</div>
-	<div id="movie" class="wrapper wrapper-style3">
-
+	<div id="movie" class="wrapper wrapper-style1">
+		<div id="movie_container">
+			<div id="movie_info">
+				<div id="movie_info_left">
+					<div id="post_description">
+						<div id="post">
+							
+						</div>
+						<div id="description">
+							
+						</div>
+					</div>
+					<div id="reviews">
+						
+					</div>
+				</div>
+				<div id="movie_info_right">
+					<div id="rating">
+						
+					</div>
+					<div id="cast_runtime">
+						<div id="cast"> 
+							
+						</div>
+						<div id="runtime">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="movie_footer">
+				<div id="comment">
+					
+				</div>
+				<div id="movie_share">
+					<a href="" class="button button-big">
+						Share it through facebook
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<?php 
 		if(empty($_SESSION['loggedin'])){	
