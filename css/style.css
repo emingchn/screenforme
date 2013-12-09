@@ -1022,12 +1022,56 @@
 /* new                                                                    */
 /*********************************************************************************/
 
+#movie_info
+{
+	float: left;
+	width: 100%;
+}
+
+#movie_footer
+{
+	float: left;
+	width: 100%;
+}
+
 #movie_info_left
 {
+	float: left;
 	width: 70%;
+}
+
+#post_description
+{
+	float: left;
+	width: 100%;
+}
+
+#post
+{
+	float: left;
+	width: 50%;
+}
+
+#description
+{
+	width: 50%;
+	float: left;
+	overflow: hidden;
+	word-wrap: break-word;   word-break: break-all;
+}
+
+
+#reviews
+{
+	float: left;
+	width: 100%;
+	padding: 50px 50px 50px 150px;
+	overflow: hidden;
+	word-wrap: break-word;   word-break: break-all;
 }
 
 #movie_info_right
 {
+	float: left;
 	width: 30%;
 }

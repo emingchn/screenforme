@@ -39,12 +39,13 @@
 							
 						</div>
 						<div id="description">
-							
+						
 						</div>
+						<br class="clear" />
 					</div>
 					<div id="reviews">
 						
-					</div>
+					<br class="clear" />
 				</div>
 				<div id="movie_info_right">
 					<div id="rating">
@@ -70,6 +71,7 @@
 					</a>
 				</div>
 			</div>
+			<br class="clear" />
 		</div>
 	</div>
 	<?php 
