@@ -58,10 +58,10 @@
 <body>
 	<nav id="nav">
 				<ul class="container">
-					<li><a href="index.php">ScreenForMe</a></li>
-					<li>
+					<li><a style="background: #9E0E13; font-size: 110%;" onMouseOver="this.style.background='#5E5858'" onMouseOut="this.style.background='#9E0E13'" href="index.php">ScreenForMe</a></li>
+					<li style="width:600px">
 						<input type="text" id="search_info" name="search" placeholder="Movie name">
-						<span><a href="#result" onclick="testsearch(document.getElementById('search_info').value)">Search</a></span>
+						<span><a style="background: #9E0E13" onMouseOver="this.style.background='#5E5858'" onMouseOut="this.style.background='#9E0E13'" href="#result" onclick="testsearch(document.getElementById('search_info').value)">Search</a></span>
 					</li>
 					<?php 
 						if(empty($_SESSION['loggedin'])){	

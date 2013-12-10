@@ -3,7 +3,7 @@
 	<div id="index" class="wrapper wrapper-style1 wrapper-first">
 		<article class="container">
 			<div id="comingsoon">
-				<h2>Coming Soon</h1><br />	
+				<h2>Coming Soon: this is a index section, including the upcoming movie list and in theaters list.</h1><br />	
 				<ul>
 					<li></li>
 					<li></li>
@@ -56,7 +56,10 @@
 			</div>
 			<div id="movie_footer">
 				<div id="comment">
-					
+					<form method="post" action="#">
+					<textarea rows="4" cols="50" style="display: block" placeholder="Comment:"/></textarea><br/>
+					<input type="submit" style="display: block" class="button form-button-submit" value="Submit"/> <br/><br/>
+					</form>
 				</div>
 				<div id="movie_share">
 					<p id="para"></p>
@@ -105,17 +108,36 @@
 		}else{
 	?>
 	<div id="profile" class="wrapper wrapper-style3">
-		<article>	
-		<h1>profile</h1><br />
-		<h1>profile</h1><br />
-		<h1>profile</h1><br />
-		<h1>profile</h1><br />
-		<h1>profile</h1><br />
+		<article class="container" id="top">
+			<div class="row">
+				<div class="4u">
+					<span class="me image image-full"><img src="images/me.jpg" alt="" /></span>
+				</div>
+				<div class="8u">
+					<header>
+						<h1>Hi. I'm <strong>Jane Doe</strong>.</h1>
+					</header>
+					<p>And this is <strong>Profile</strong>, a section containing information about shared movies and comments from frieds </p>
+					<a href="#index" class="button button-big">Back to top</a>
+				</div>
+			</div>
 		<?php include "profile.php"; ?>
 		</article>
 	</div>
 	<?php
 		}
 	?>
+	<div id="footers" class="wrapper wrapper-style4">
+		<article class="container">
+		<footer>
+						<ul id="copyright" style="font-size:1.5em">
+							<li>&copy; 2013 Screen For Me</li>
+							<li>Yiming Cheng, Jun Wang</li>
+							<li>Mashup project for the final.</li>
+						</ul>
+		</footer>
+		</article>
+	</div>
+
 </body>
 </html>

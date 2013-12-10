@@ -49,7 +49,7 @@
         <input type="text" name="identifier" id="identifier" placeholder="Username or Email"/><br /> <br />  
         <input type="password" name="pwd" id="pwd" placeholder="Password"/><br />  <br /> 
         <br/>
-        <input class="button button-big" type="submit" name="login" id="login" value="Login" />  <br />
+        <input class="button form-button-submit" type="submit" name="login" id="login" value="Login" />  <br />
         <a href= "index.php#findpw">Forget password?</a>
     </fieldset>  
     </form>

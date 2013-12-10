@@ -61,7 +61,7 @@ else
         <input type="password" name="password" id="password" placeholder="Password"/><br /><br />   
         <input type="password" name="repassword" id="repassword" placeholder="Re-enter password" /><br /><br />  
         <input type="text" name="email" id="email" placeholder="Email" /><br /> <br /> 
-        <input class="button button-big" type="submit" name="register" id="register" value="Register" />  
+        <input class="button form-button-submit" type="submit" name="register" id="register" value="Register" />  
     </fieldset>  
     </form>  
       
