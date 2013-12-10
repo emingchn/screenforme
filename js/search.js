@@ -32,8 +32,9 @@ function testsearch(information){
 	   $("div#result .container #row"+newnum).append('<div id="'+count+'" class="4u" />'); 
 	   $("div#result .container #row"+newnum+" #"+count).append('<article id="article'+count+'" class="box box-style2" />');
 	   $("div#result .container #row"+newnum+" #"+count+" #article"+count).append('<h3 class="title"><a href="#movie">' + movie.title + '   ('+ movie.year +')</a></h3>');
-	   $("div#result .container #row"+newnum+" #"+count+" #article"+count).append('<a id="img'+count+'" class="image image-full"/>')
-	   $("div#result .container #row"+newnum+" #"+count+" #article"+count+" #img"+count).append('<a href="#movie" onclick = "moviedetails(\''+movie.links.self+'\')"> <img height=300px width=100px src="' + movie.posters.original + '" /></a>');																						
+	   $("div#result .container #row"+newnum+" #"+count+" #article"+count).append('<a id="img'+count+'" class="image image-full" style="display:block"/>');
+	   $("div#result .container #row"+newnum+" #"+count+" #article"+count).append('<br class="clear" />');
+	   $("div#result .container #row"+newnum+" #"+count+" #article"+count+" #img"+count).append('<a href="#movie" onclick = "moviedetails(\''+movie.links.self+'\')"> <img height=350px width=250px src="' + movie.posters.original + '" /></a>');																						
 	   count = count +1;
 	 }); 
 	

@@ -73,7 +73,7 @@
 						}else{
 					?>
 					<li><a href="logout.php">Log out</a></li>
-					<li><a href="index.php#profile">Welcome, <span id="identi"><?php echo $_SESSION['usr']?>!</span></a>
+					<li><a href="index.php#profile">Welcome, <span id="identi"><?php echo $_SESSION['usr']?></span>!</a>
 						
 					<?php
 						}

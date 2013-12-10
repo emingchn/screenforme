@@ -54,15 +54,14 @@ else
 {  
     ?>  
       
-   <h1>Register</h1>      
-   <p>Please enter your details below to register.</p>  
+   <h1>Register</h1><br />          
     <form method="post" action="index.php#signup" name="registerform" id="registerform">  
     <fieldset>  
-        <label for="username">Username:</label><input type="text" name="username" id="username" /><br />  
-        <label for="password">Password:</label><input type="password" name="password" id="password" /><br />  
-        <label for="repassword">Re-enter Password:</label><input type="password" name="repassword" id="repassword" /><br /> 
-        <label for="email">Email Address:</label><input type="text" name="email" id="email" /><br />  
-        <input type="submit" name="register" id="register" value="Register" />  
+        <input type="text" name="username" id="username" placeholder="Username"/><br /><br />   
+        <input type="password" name="password" id="password" placeholder="Password"/><br /><br />   
+        <input type="password" name="repassword" id="repassword" placeholder="Re-enter password" /><br /><br />  
+        <input type="text" name="email" id="email" placeholder="Email" /><br /> <br /> 
+        <input class="button button-big" type="submit" name="register" id="register" value="Register" />  
     </fieldset>  
     </form>  
       

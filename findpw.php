@@ -34,13 +34,14 @@
 		}
 		else{
 			?>
-		<h1>Reset password</h1>
-		<p>Please enter your email address.</p>
+			<br/>
+			<br/>
+			<br/>
+		<h1>Reset password</h1><br/>
 		<form method="post" action="index.php#findpw" name="findpw" id="findpw">
 			<fieldset>
-				<label for="email">Email:</label>
-				<input type="text" name="email" id="email" /><br/>
-				<input type="submit" name="submie" id="submit" value="submit" />
+				<input type="text" name="email" id="email" placeholder="Email"/><br/><br/>
+				<input type="submit" name="submit" id="submit" value="submit" class="button button-big" />
 			</fieldset>			
 		</form>
 		<?php

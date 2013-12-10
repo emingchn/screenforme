@@ -26,7 +26,7 @@
 	<div id="result" class="wrapper wrapper-style3">
 			 
 	</div>
-	<div id="movie" class="wrapper wrapper-style1">
+	<div id="movie" class="wrapper wrapper-style3">
 		<div id="movie_container">
 			<div id="movie_info">
 				<div id="movie_info_left">
@@ -60,9 +60,19 @@
 				</div>
 				<div id="movie_share">
 					<p id="para"></p>
+					<?php 
+						if(empty($_SESSION['loggedin'])){	
+					?>
+					<a href="#signin" class="button button-big">Sign In</a> 
+					<?php
+						}else{
+					?>	
 					<a href="" id="copy_p" class="button button-big">Copy Link</a> 
+					<?php
+						}
+					?>	
 					<?php if (!$user) { ?>
-       					You've to login with Faceook to share.
+					<p>You've to login with Faceook to share.</p>
        						 <a href="<?=$loginUrl?>" class="button button-big">Facebook Login</a>
     				<?php } else { ?>
         					<a id="copy_p" onclick="streamPublish('screenforme','Comment this please!','Comment this please!','','screenforme1'); return false;" class="button button-big">Share</a>

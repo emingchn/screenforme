@@ -25,12 +25,12 @@
 				$_SESSION['email'] = $email;
 				$_SESSION['usr'] = $usr;
 				$_SESSION['loggedin'] = 1;
-				echo "<h1>Success</h1>";
-				echo "<h1>We are now redirecting you to the member area.</h1>";
+				echo "<h1>Success</h1><br /><br /><br /><br />";
+				echo "<h3>We are now redirecting you to the member area.</h3>";
 				echo "<meta content='1;index.php' http-equiv='refresh'/>"; 
 			}
 			else{
-				echo "<h1>Error</h1>";  
+				echo "<h1>Error</h1><br /><br /><br /><br />"; 
         		echo "<p>Sorry, your account could not be found. Please click here to<a href=\"index.php\"> try again</a>.</p>";  
 			}
 			// let the user login
@@ -40,15 +40,16 @@
 		}
 		else{// display the login form
 		?>
-		<h1>Login</h1>  
-      
-   <p>Thanks for visiting! Please either login below, or <a href="index.php#signup">click here to register</a>.</p>  
+		<h1>Login</h1>  <br /> 
+      <br /> 
+   <p>Thanks for visiting! Need a new account?<a href="index.php#signup">click here to register</a>.</p><br />   
       
     <form method="post" action="index.php#signin" name="loginform" id="loginform">  
     <fieldset>  
-        <label for="identifier">Username or Email:</label><input type="text" name="identifier" id="identifier" /><br />  
-        <label for="pwd">Password:</label><input type="password" name="pwd" id="pwd" /><br />  
-        <input type="submit" name="login" id="login" value="Login" />  <br />
+        <input type="text" name="identifier" id="identifier" placeholder="Username or Email"/><br /> <br />  
+        <input type="password" name="pwd" id="pwd" placeholder="Password"/><br />  <br /> 
+        <br/>
+        <input class="button button-big" type="submit" name="login" id="login" value="Login" />  <br />
         <a href= "index.php#findpw">Forget password?</a>
     </fieldset>  
     </form>
