@@ -16,15 +16,14 @@ function moviedetails(information){
 
 	function searchMovieDetails(data) {
 		/****empty*********/
-	// $("div#movie #movie_container #movie_footer #movie_share #para").empty();
-	// $("div#movie #movie_container #movie_info #movie_info_left #post_description #description").empty();
-	// $("div#movie #movie_container #movie_info #movie_info_left #post_description #post").empty();
-	// $("div#movie #movie_container #movie_info #movie_info_right #rating").empty();
-	// $("div#movie #movie_container #movie_info #movie_info_right #cast").empty();
-	// $("div#movie #movie_container #movie_info #movie_info_left #reviews").empty();
-	// $("div#movie #movie_container #movie_info").empty();
-	// $("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
-	// $("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
+	$("div#movie #movie_container #movie_footer #movie_share #para").empty();
+	$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").empty();
+	$("div#movie #movie_container #movie_info #movie_info_left #post_description #post").empty();
+	$("div#movie #movie_container #movie_info #movie_info_right #rating").empty();
+	$("div#movie #movie_container #movie_info #movie_info_right #cast").empty();
+	$("div#movie #movie_container #movie_info #movie_info_left #reviews").empty();
+	$("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
+	$("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
 	/*********append********/
 		$("div#movie #movie_container #movie_footer #movie_share #para").append('localhost/screenforme/index.php?mn='+data.id+'user=');
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<h3 class="title: ">' + data.title +'</h3>'); 
