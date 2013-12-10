@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html"; charset=utf-8 />
+	<link rel="stylesheet" href="css/tabmenu.css" />
 	<script src="js/jquery.js"></script> 
 	<script src="js/jquery.validate.js"></script>
 	<script src="js/formvalidation.js"></script> 
@@ -11,6 +12,7 @@
 	<script src="js/search.js"></script>
 	<script src="js/movie.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/tabmenu.js"></script>
 	<script src="js/jquery.zclip.min.js"></script>
 	<script type="text/javascript">
             function streamPublish(name, description, hrefTitle, hrefLink, userPrompt){        

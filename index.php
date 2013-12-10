@@ -2,22 +2,25 @@
 <?php include_once 'header.php'; ?>
 	<div id="index" class="wrapper wrapper-style1 wrapper-first">
 		<article class="container">
-			<div id="comingsoon">
-				<h2>Coming Soon: this is a index section, including the upcoming movie list and in theaters list.</h1><br />	
+		<ul id="tabmenu">
+			<li id="comingsoon">
+				<a href="?1">Coming Soon</a>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><a href="?21">upcoming 1</a></li>
+		            <li><a href="?22">upcoming 2</a></li>
+		            <li><a href="?23">upcoming 3</a></li>
+		            <li><a href="?24">upcoming 4</a></li>
 				</ul>
-			</div>
-			<div id="intheaters">
-				<h2>In Theaters</h1><br />	
+			</li>
+			<li id="intheaters">
+				<a href="?2">In Theaters</a>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+	 				<li><a href="?12">In Theaters 1</a></li>
+           		 	<li><a href="?12">In Theaters 2</a></li>
+           		 	<li><a href="?13">In Theaters 3</a></li>
 				</ul>
-			</div>
+			</li>
+		</ul>
 			<div id="slideshow">
 				
 			</div>	
@@ -38,7 +41,9 @@
 						
 						</div>
 						<br class="clear" />
+						<hr>
 					</div>
+					
 					<div id="reviews">
 					
 					</div>
@@ -55,12 +60,28 @@
 				</div>
 			</div>
 			<div id="movie_footer">
+				<hr>
 				<div id="comment">
-					<form method="post" action="#">
-					<textarea rows="4" cols="50" style="display: block" placeholder="Comment:"/></textarea><br/>
+					<div id="com" style="width:50%;float: left">
+						<div id="globalcom">
+							global comment 1<br/>
+							global comment 2<br/>
+							global comment 3<br/>
+						</div>
+						<hr>
+						<div id="privatecom">
+							private comment 1<br/>
+							private comment 2<br/>
+							private comment 3<br/>
+						</div>
+					</div>
+					<form method="post" action="#" style="width:50%;float:left;padding-left: 150px;">
+					<textarea style="display: block;width:400px;heigth:400px" placeholder="Comment:"/></textarea><br/>
 					<input type="submit" style="display: block" class="button form-button-submit" value="Submit"/> <br/><br/>
 					</form>
+					<br class="clear"/>
 				</div>
+				<hr>
 				<div id="movie_share">
 					<p id="para"></p>
 					<?php 
