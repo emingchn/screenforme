@@ -34,19 +34,19 @@ if(!empty($_POST['username']) && !empty($_POST['password']))
             $mail->SetFrom('emingchn@gmail.com', 'screenforme');    
             $mail->Subject    = 'Activate your account at Screenforme.com';   
             $mail->IsHTML(true);      
-            $mail->Body       = '<a href="localhost/screenforme/accountverify.php?verify='.$actikey.'&username='.$username.'">Click here to activate your account.</a>';
+            $mail->Body       = '<a href="screenformecse636.com/accountverify.php?verify='.$actikey.'&username='.$username.'">Click here to activate your account.</a>';
             $mail->AddAddress($email, $username);
             if(!$mail->Send()){
                 echo "<h1>failed</h1>";
             }
             else{
-                echo "<p>Your account was successfully created. Please check mailbox for activation.";
+                echo "<h2>Your account was successfully created. Please check mailbox for activation.";
             }  
         }   
         else  
         {  
             echo "<h1>Error</h1>";  
-            echo "<p>Sorry, your registration failed. Please go back and <a href=\"index.php\">try again</a>.</p>";   
+            echo "<h2>Sorry, your registration failed. Please go back and <a href=\"index.php\">try again</a>.</p>";   
         }         
      }  
 }  

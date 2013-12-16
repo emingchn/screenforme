@@ -2,7 +2,7 @@
     //facebook application
     $fbconfig['appid' ]     = "608546139206835";
     $fbconfig['secret']     = "e07625547d54925100e2b3cc289814c7";
-    $fbconfig['baseurl']    = "http://localhost/screenforme/index.php";
+    $fbconfig['baseurl']    = "http://screenformecse636.com";
 
     //
     if (isset($_GET['request_ids'])){

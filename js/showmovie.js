@@ -1,16 +1,6 @@
-<?php 
-include "connectdb.php";
-$mid = stripslashes(trim($_GET['mn'])); 
-$shared = stripslashes(trim($_GET['user']));
-
-$api = "http://api.rottentomatoes.com/api/public/v1.0/movies/".$mid.".json";
-echo "<p id='movieid' style='display:none'>$api</p>";	
-?>
-<script language='javascript' src='js/youtube.js'></script>
-<script language='javascript' src='https://apis.google.com/js/client.js'></script>
-<script type="text/javascript" >
-function showmovie(){
-	var data = $("#movieid").text(); 	
+function redirect(){
+	var data = $(#movieid).text();
+	alert(data);
 	moviedetails(data);
 	$("html,body").animate({scrollTop: $("#movie").offset().top}, 1000);
 }
@@ -36,9 +26,6 @@ function moviedetails(information){
 	var identi = $("#identi").text();
 		/****empty*********/
 	$("div#movie #movie_container #movie_footer #movie_share #para").empty();
-	$("div#movie #movie_container #movie_footer #movie_share #para1").empty();
-	$("div#movie #movie_container #movie_footer #movie_share #para2").empty();
-	$("div#movie #movie_container #movie_footer #movie_share #para3").empty();
 	$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").empty();
 	$("div#movie #movie_container #movie_info #movie_info_left #post_description #post").empty();
 	$("div#movie #movie_container #movie_info #movie_info_right #rating").empty();
@@ -48,19 +35,16 @@ function moviedetails(information){
 	$("div#movie #movie_container #movie_info #movie_container #movie_info").empty();
 	/*********append********/
 
-		$("div#movie #movie_container #movie_footer #movie_share #para").append('screenformecse636.com/index.php?mn='+data.id+'&user='+identi);
-		$("div#movie #movie_container #movie_footer #movie_share #para1").append(data.id);
-		$("div#movie #movie_container #movie_footer #movie_share #para2").append(identi);
-		$("div#movie #movie_container #movie_footer #movie_share #para3").append(data.title);
-		onClientLoad();
-		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<h2 style="margin-bottom:2em" class="title:">' + data.title +'</h2>'); 
+		$("div#movie #movie_container #movie_footer #movie_share #para").append('localhost/screenforme/index.php?mn='+data.id+'user='+identi);
+			
+		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<h3 class="title:">' + data.title +'</h3>'); 
 		
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #post").append('<img width=350px height=450px src = "' + data.posters.original +'" />'); 
-		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<p style="color:#335588;margin-bottom:2em"><b>Year</b>: ' + data.year +'</p>'); 
-		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p style="margin-bottom:2em;color:red"><b>Critics score</b>: ' + data.ratings.critics_score +'</p>');
-		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p style="margin-bottom:2em;color:red"><b>Audience score</b>: '+ data.ratings.audience_score +'</p>');
-		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p style="margin-bottom:2em"><b>Director</b>: '+ data.abridged_directors[0].name +'</p>');
-		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p ><b>Cast</b>: '+ data.abridged_cast[0].name +'</p>');
+		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<p style="color:#335588"><b>Year</b>: ' + data.year +'</p>'); 
+		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p ><b>Critics score</b>: ' + data.ratings.critics_score +'</p>');
+		$("div#movie #movie_container #movie_info #movie_info_right #rating").append('<p ><b>Audience score</b>: '+ data.ratings.audience_score +'</p>');
+		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p ><b>Director</b>: '+ data.abridged_directors[0].name +'</p>');
+		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p ><b>cast</b>: '+ data.abridged_cast[0].name +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p >'+ data.abridged_cast[1].name +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_right #cast").append('<p >'+ data.abridged_cast[2].name +'</p>');
 		$("div#movie #movie_container #movie_info #movie_info_left #post_description #description").append('<p style="color:#005522" ><b>Studio</b>:'+ data.studio +'</p>');
@@ -104,12 +88,13 @@ function moviedetails(information){
 		function searchReviews(data){
 
 			var reviewsArray = data.reviews;
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="text-align:left" class="quote">' + reviewsArray[0].quote +'</p>');
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<h2 style="color:#007722;text-align:right" class="critic">' + reviewsArray[0].critic +'</h2><br /><hr class="carved">');
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="text-align:left" class="quote">' + reviewsArray[1].quote +'</p>');
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<h2 style="color:#007722;text-align:right" class="critic">' + reviewsArray[1].critic +'</h2><br /><hr class="carved">');
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="text-align:left" class="quote">' + reviewsArray[2].quote +'</p>');
-			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<h2 style="color:#007722;text-align:right" class="critic">' + reviewsArray[2].critic +'</h2><br />');	
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<h2 class="title"> Reviews </h3><br/>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p class="quote">' + reviewsArray[0].quote +'</p>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="color:#007722" class="critic">' + reviewsArray[0].critic +'</p><br /><hr>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p class="quote">' + reviewsArray[1].quote +'</p>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="color:#007722" class="critic">' + reviewsArray[1].critic +'</p><br /><hr>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p class="quote">' + reviewsArray[2].quote +'</p>');
+			$("div#movie #movie_container #movie_info #movie_info_left #reviews").append('<p style="color:#007722" class="critic">' + reviewsArray[2].critic +'</p><br />');	
 		}
 
 		
@@ -131,15 +116,3 @@ function moviedetails(information){
 		}
 	}
 }
-
-</script>
-
-<?php 
-if(empty($mid)){
-	echo "";
-}else{
-	echo '<script type="text/javascript">'; 
-	echo 'showmovie()'; 
-	echo '</script>';
-}
-?>

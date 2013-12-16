@@ -21,14 +21,14 @@
 	            $mail->SetFrom('emingchn@gmail.com', 'screenforme');    
 	            $mail->Subject    = 'Reset your password';   
 	            $mail->IsHTML(true);      
-	            $mail->Body       = '<a href="localhost/resetpw.php?email='.$email.'">Click here to reset your password.</a>';
+	            $mail->Body       = '<a href="screenformecse636.com/resetpw.php?email='.$email.'">Click here to reset your password.</a>';
 	            $mail->AddAddress($email);
 	            if(!$mail->Send()){
 	                echo "<h1>failed</h1>";
 	            }
 	            else{
 	            	echo "<br/><br/><br/><br/>";
-	                echo "<p>A reset mail has been sent.Please check mailbox.<p>";
+	                echo "<h2>A reset mail has been sent.Please check mailbox.<h2>";
 	            }  
 			}
 		}
@@ -41,7 +41,7 @@
 		<form method="post" action="index.php#findpw" name="findpw" id="findpw">
 			<fieldset>
 				<input type="text" name="email" id="email" placeholder="Email"/><br/><br/>
-				<input type="submit" name="submit" id="submit" value="submit" class="button button-big" />
+				<input type="submit" name="submit" value="submit" class="button button-big" />
 			</fieldset>			
 		</form>
 		<?php

@@ -10,10 +10,8 @@
 	<script src="js/config.js"></script>
 	<script src="js/skel.min.js"></script>
 	<script src="js/search.js"></script>
-	<script src="js/movie.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/tabmenu.js"></script>
-	<script src="js/jquery.zclip.min.js"></script>
 	<script type="text/javascript">
             function streamPublish(name, description, hrefTitle, hrefLink, userPrompt){        
                 FB.ui({ method : 'feed', 
@@ -21,7 +19,15 @@
                         link   :  hrefLink,
                         caption:  hrefTitle,
                         picture: ''
-               });
+               },
+    function(response){
+      if(response && response.post_id) {
+        self.location.href = 'history.php?hm='+$("#para1").text()+'&usr='+$("#para2").text()+'&title='+$("#para3").text();
+      }
+      else {
+        alert("Not shared!");
+      }
+    });               
             }
    	</script>
    	<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
@@ -34,18 +40,6 @@
        });
        
      </script>
-    <script type="text/javascript">
-		$(function(){
-			$("#copy_p").zclip({
-				path: 'js/ZeroClipboard.swf',
-				copy: $('#para').text(),
-				afterCopy: function(){
-					$("#para").css("background-color",'#cff');
-					$("<span id='msg'/>").insertAfter($('#copy_p')).text('You can share now!').fadeOut(2000);
-				}
-			});
-		});
-	</script>
 	<title>Screen For Me</title>
 	<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
